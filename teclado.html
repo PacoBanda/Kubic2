@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kubicar Teclado Pro</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+</head>
+<body>
+    <a href="index.html" class="back-home">🏠 Inicio</a>
+
+    <div class="slider-container" id="slider">
+        <section class="slide">
+            <div class="card">
+                <h2>AVANCE</h2>
+                <label class="section-label">Anchuras</label>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_a1" value="8.2"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_a2" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_a3" value="0"></div>
+                </div>
+                <label class="section-label">Alturas</label>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_h1" value="5.1"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_h2" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_h3" value="0"></div>
+                </div>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_h4" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_h5" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_h6" value="0"></div>
+                </div>
+                <label class="section-label">Longitudes</label>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_lI" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="av_lD" value="0"></div>
+                </div>
+                <div class="result-container">
+                    <div class="result" id="res_avance">0 Tn</div>
+                </div>
+                <div class="image-footer"><img src="img/Avance.svg" alt="Avance" /></div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="card">
+                <h2>REBAJE - REALCE</h2>
+                <div class="material-selector">
+                    <button class="mat-btn active" id="btn_firme" onclick="setDensity(2.0, 'btn_firme')">FIRME (2.0)</button>
+                    <button class="mat-btn" id="btn_relleno" onclick="setDensity(1.68, 'btn_relleno')">RELLENO (1.68)</button>
+                </div>
+                <label class="section-label">Anchuras</label>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_a1" value="8.0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_a2" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_a3" value="0"></div>
+                </div>
+                <label class="section-label">Alturas</label>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_h1" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_h2" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_h3" value="0"></div>
+                </div>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_h4" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_h5" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_h6" value="0"></div>
+                </div>
+                <label class="section-label">Longitudes</label>
+                <div class="input-grid">
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_lI" value="0"></div>
+                    <div class="gestural-box"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="re_lD" value="0"></div>
+                </div>
+                <div class="result-container">
+                    <div class="result" id="res_rebaje">0 Tn</div>
+                </div>
+                <div class="image-footer"><img src="img/ReAlceBaje.svg" alt="Rebaje" /></div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="card">
+                <h2>RECORTE</h2>
+                <label class="section-label">Ancho</label>
+                <div class="gestural-box full"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="rec_anch" value="0"></div>
+                <label class="section-label">Alto</label>
+                <div class="gestural-box full"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="rec_alt" value="5.1"></div>
+                <label class="section-label">Longitud</label>
+                <div class="gestural-box full"><input type="number" step="0.1" min="0" lang="en" class="kb-input" data-id="rec_lng" value="0"></div>
+                <div class="result-container">
+                    <div class="result" id="res_recorte">0 Tn</div>
+                </div>
+                <div class="image-footer"><img src="img/Recorte.svg" alt="Recorte" /></div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="card">
+                <h2>RESUMEN</h2>
+                <div class="summary-container">
+                    <div class="summary-item">
+                        <span class="summary-label">Avance</span>
+                        <b class="summary-val" id="sum_av">0 Tn</b>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Rebaje</span>
+                        <b class="summary-val" id="sum_re">0 Tn</b>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Recorte</span>
+                        <b class="summary-val" id="sum_rec">0 Tn</b>
+                    </div>
+                </div>
+                <div class="result-container highlight">
+                    <div class="result total" id="res_total_general">0 Tn</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <script src="./JS/tecla2.js"></script>
+</body>
+</html>
